@@ -1,3 +1,7 @@
 <svg>
   <rect id="background" />
+  <image href="rainbow.png"/>
+  <text id="txtTime" class="clock-text">Time</text>
+  <rect class="divider divider-top" />
+  <text id="txtDate" class="date-text">Date</text>
 </svg>
