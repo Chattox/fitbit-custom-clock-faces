@@ -4,4 +4,7 @@
   <text id="txtTime" class="clock-text">Time</text>
   <rect class="divider divider-top" />
   <text id="txtDate" class="date-text">Date</text>
+  <text id="txtHeartRate" class="hr-text" />
+  <image href="battery-100.png" class="battery-icon" width="26" height="26" fill="#CC0000" />
+  <text id="txtBattery" class="battery-text" />
 </svg>
