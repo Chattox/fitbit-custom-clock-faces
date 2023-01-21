@@ -7,11 +7,13 @@ import { battery } from 'power';
 
 import { zeroPad } from '../utils/zeroPad';
 import { shortDays, shortMonths } from '../utils/shortDates';
+import { getBatteryImage } from '../utils/getBatteryImage';
 
 const txtTime = document.getElementById('txtTime');
 const txtDate = document.getElementById('txtDate');
 const txtHeartRate = document.getElementById('txtHeartRate');
 const txtBattery = document.getElementById('txtBattery');
+const imgBattery = document.getElementById('imgBattery');
 
 clock.granularity = 'seconds';
 clock.ontick = (evt) => {
@@ -49,4 +51,5 @@ clock.ontick = (evt) => {
   txtTime.text = timeString;
   txtDate.text = dateString;
   txtBattery.text = batteryString;
+  imgBattery.href = getBatteryImage(battery);
 };
