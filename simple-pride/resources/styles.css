@@ -38,14 +38,24 @@
   fill: white
 }
 
+.heart-icon {
+  x: 5%;
+  y: 75%-22;
+}
+
 .hr-text {
   font-size: 26;
   text-length: 32;
   text-anchor: center;
-  x: 5%;
+  x: 5%+33;
   y: 75%;
   fill: white;
 
+}
+
+.battery-icon {
+  x: 5%;
+  y: 75%+20;
 }
 
 .battery-text {
@@ -55,11 +65,6 @@
   x: 5%+33;
   y: 75%+42;
   fill: white;
-}
-
-.battery-icon {
-    x: 5%;
-    y: 75%+20;
 }
 
 .divider {
