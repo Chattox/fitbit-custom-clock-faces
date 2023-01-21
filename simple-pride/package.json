@@ -10,8 +10,8 @@
   "fitbit": {
     "appUUID": "becef6eb-7fd3-4adb-a46c-9ada0287cf67",
     "appType": "clockface",
-    "appDisplayName": "Simple Pride",
-    "iconFile": "resources/icon.png",
+    "appDisplayName": "Simple Rainbow",
+    "iconFile": "resources/images/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [
       "access_heart_rate"
