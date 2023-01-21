@@ -1,14 +1,14 @@
 export const getBatteryImage = (battery) => {
   switch (true) {
     case battery.charging:
-      return 'battery-charge.png';
+      return 'images/battery-charge.png';
     case battery.chargeLevel > 75:
-      return 'battery-100.png';
+      return 'images/battery-100.png';
     case battery.chargeLevel > 50:
-      return 'battery-75.png';
+      return 'images/battery-75.png';
     case battery.chargeLevel > 25:
-      return 'battery-50.png';
+      return 'images/battery-50.png';
     default:
-      return 'battery-25.png';
+      return 'images/battery-25.png';
   }
 };

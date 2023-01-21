@@ -1,11 +1,11 @@
 <svg>
   <rect id="background" />
-  <image href="rainbow.png"/>
+  <image href="images/rainbow.png"/>
   <text id="txtTime" class="clock-text">Time</text>
   <rect class="divider divider-top" />
   <text id="txtDate" class="date-text">Date</text>
-  <image href="heart.png" id="imgHeart" class="heart-icon" width="26" height="26" fill="white" />
+  <image href="images/heart.png" id="imgHeart" class="heart-icon" width="26" height="26" fill="white" />
   <text id="txtHeartRate" class="hr-text" />
-  <image href="battery-25.png" id="imgBattery" class="battery-icon" width="26" height="26" />
+  <image href="images/battery-25.png" id="imgBattery" class="battery-icon" width="26" height="26" />
   <text id="txtBattery" class="battery-text" />
 </svg>
