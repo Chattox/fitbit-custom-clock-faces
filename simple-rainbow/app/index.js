@@ -4,6 +4,7 @@ import { HeartRateSensor } from 'heart-rate';
 import { display } from 'display';
 import { me as appbit } from 'appbit';
 import { battery } from 'power';
+import * as messaging from 'messaging';
 
 import { zeroPad } from '../utils/zeroPad';
 import { shortDays, shortMonths } from '../utils/shortDates';
@@ -14,6 +15,13 @@ const txtDate = document.getElementById('txtDate');
 const txtHeartRate = document.getElementById('txtHeartRate');
 const txtBattery = document.getElementById('txtBattery');
 const imgBattery = document.getElementById('imgBattery');
+const imgBackground = document.getElementById('imgBackground');
+
+messaging.peerSocket.addEventListener('message', (event) => {
+  if (event && event.data && event.data.key === 'background') {
+    imgBackground.href = event.data.value.values[0].value;
+  }
+});
 
 clock.granularity = 'seconds';
 clock.ontick = (evt) => {

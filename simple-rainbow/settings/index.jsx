@@ -1,19 +1,18 @@
-const HelloWorld = (props) => {
+const Settings = (props) => {
   return (
     <Page>
-      <Section title={<Text bold align="center">Background</Text>}>
+      <Section>
         <Select 
-          label={'Backgrounds'} 
+          label={'Background'} 
           settingsKey='background' 
           options={[
-              {name: 'Bright Rainbow', value:'images/rainbow.png'},
-              {name: 'Neon Rainbow', value:'neon'}
+              {name: 'Bright Rainbow', value:'images/rainbow-bright.png'},
+              {name: 'Neon Rainbow', value:'images/rainbow-neon.png'}
             ]}
-          onSelection={(selection) => console.log(selection.values[0].value)} 
           />
       </Section>
     </Page>
   )
 }
 
-registerSettingsPage(HelloWorld)
+registerSettingsPage(Settings)
