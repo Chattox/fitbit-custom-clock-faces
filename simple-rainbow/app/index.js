@@ -16,10 +16,15 @@ const txtHeartRate = document.getElementById('txtHeartRate');
 const txtBattery = document.getElementById('txtBattery');
 const imgBattery = document.getElementById('imgBattery');
 const imgBackground = document.getElementById('imgBackground');
+const imgHeart = document.getElementById('imgHeart');
 
 messaging.peerSocket.addEventListener('message', (event) => {
   if (event && event.data && event.data.key === 'background') {
     imgBackground.href = event.data.value.values[0].value;
+    imgHeart.href =
+      event.data.value.values[0].value == 'images/rainbow-bright.png'
+        ? 'images/heart-bright.png'
+        : 'images/heart-neon.png';
   }
 });
 
