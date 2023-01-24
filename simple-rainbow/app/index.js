@@ -21,10 +21,24 @@ const imgHeart = document.getElementById('imgHeart');
 messaging.peerSocket.addEventListener('message', (event) => {
   if (event && event.data && event.data.key === 'background') {
     imgBackground.href = event.data.value.values[0].value;
-    imgHeart.href =
-      event.data.value.values[0].value == 'images/rainbow-bright.png'
-        ? 'images/heart-bright.png'
-        : 'images/heart-neon.png';
+    let heartImage = 'images/heart-bright.png';
+    switch (event.data.value.values[0].value) {
+      case 'images/rainbow-dark.png':
+        heartImage = 'images/heart-dark.png';
+        break;
+      case 'images/rainbow-neon.png':
+        heartImage = 'images/heart-neon.png';
+        break;
+      case 'images/rainbow-pastel-bright.png':
+        heartImage = 'images/heart-pastel-bright.png';
+        break;
+      case 'images/rainbow-pastel-dark.png':
+        heartImage = 'images/heart-pastel-dark.png';
+        break;
+      default:
+        heartImage = 'images/heart-bright.png';
+    }
+    imgHeart.href = heartImage;
   }
 });
 
