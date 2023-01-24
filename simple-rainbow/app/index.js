@@ -4,6 +4,7 @@ import { HeartRateSensor } from 'heart-rate';
 import { display } from 'display';
 import { me as appbit } from 'appbit';
 import { battery } from 'power';
+import * as messaging from 'messaging';
 
 import { zeroPad } from '../utils/zeroPad';
 import { shortDays, shortMonths } from '../utils/shortDates';
@@ -14,6 +15,32 @@ const txtDate = document.getElementById('txtDate');
 const txtHeartRate = document.getElementById('txtHeartRate');
 const txtBattery = document.getElementById('txtBattery');
 const imgBattery = document.getElementById('imgBattery');
+const imgBackground = document.getElementById('imgBackground');
+const imgHeart = document.getElementById('imgHeart');
+
+messaging.peerSocket.addEventListener('message', (event) => {
+  if (event && event.data && event.data.key === 'background') {
+    imgBackground.href = event.data.value.values[0].value;
+    let heartImage = 'images/heart-bright.png';
+    switch (event.data.value.values[0].value) {
+      case 'images/rainbow-dark.png':
+        heartImage = 'images/heart-dark.png';
+        break;
+      case 'images/rainbow-neon.png':
+        heartImage = 'images/heart-neon.png';
+        break;
+      case 'images/rainbow-pastel-bright.png':
+        heartImage = 'images/heart-pastel-bright.png';
+        break;
+      case 'images/rainbow-pastel-dark.png':
+        heartImage = 'images/heart-pastel-dark.png';
+        break;
+      default:
+        heartImage = 'images/heart-bright.png';
+    }
+    imgHeart.href = heartImage;
+  }
+});
 
 clock.granularity = 'seconds';
 clock.ontick = (evt) => {
