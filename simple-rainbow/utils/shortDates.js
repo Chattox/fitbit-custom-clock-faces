@@ -13,4 +13,4 @@ export const shortMonths = [
   'DEV',
 ];
 
-export const shortDays = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+export const shortDays = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
